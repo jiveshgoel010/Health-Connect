@@ -1,0 +1,296 @@
+/*********************** GOOGLE FONTS ***********************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+/*********************** VARIABLES ***********************/
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --bg-black: #181818;
+    --bg-black-2: #232325;
+
+    --bg-purple-1: #380356;
+    --dark-purple-1: #6b0078;
+    --dark-purple-2: #93009c;
+
+    --light-purple-1: #b000b2;
+    --light-purple-2: #d500d8;
+
+    --grey-1: #b4b4b4;
+    --grey-2: #a2a2a2;
+    --grey-3: #a7a7a7;
+
+
+    --poppins: 'Poppins';
+    --lora: 'Lora';
+}
+
+
+/*********************** LOGIN ***********************/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.fadein-down {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.login-heading {
+    max-width: 90vw;
+    font-size: 6rem;
+    font-family: var(--lora);
+    margin: 20rem auto;
+    background: linear-gradient(to right,var(--dark-purple-2), var(--light-purple-2), var(--bg-purple-1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-form {
+    max-width: 90vw;
+    margin: 10rem auto 5rem auto;
+    background-color: var(--white);
+    border-radius: 2rem;
+}
+
+.login-form hr {
+    border: none;
+    height: 2px;
+    background-color: var(--light-purple-1);
+    margin-top: 1rem;
+}
+
+.login-form .text {
+    font-size: 6rem;
+    font-family: var(--lora);
+    margin: 2rem 3rem;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    color: var(--grey-3);
+    margin: 2rem 3rem;
+    margin-top: 5rem;
+}
+
+.login-form form .wrapper {
+    display: flex;
+    font-size: 2rem;
+    gap: 10rem;
+}
+
+.login-form form .wrapper div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.login-form form .wrapper input {
+    padding: 1rem 2rem;
+    border: 1px solid var(--grey-3);
+    border-radius: 5rem;
+    font-size: 1.4rem;
+} 
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.opacity {
+    animation: opacity 1.5s ease forwards;
+}
+
+#signupTarget {
+    margin: 5rem 0;
+    font-size: 3.5rem;
+    font-family: var(--lora);
+    opacity: 0;
+}
+
+#signupTarget a {
+    color: var(--light-purple-1);
+    border: 1px solid var(--light-purple-1);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+}
+
+#signupTarget a:hover {
+    background-color: var(--light-purple-1);
+    color: var(--white);
+}
+
+
+
+/******************** FORM BUTTONS **********************/
+.formBtn {
+    display: flex;
+    margin-top: 5rem;
+    gap: 5rem;
+    opacity: 0;
+}
+
+#submitBtn,
+#resetBtn {
+    background-color: var(--white);
+    padding: 1rem 3rem;
+    border: 1px solid var(--light-purple-1);
+    color: var(--light-purple-1);
+    border-radius: 5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+    /* margin-bottom: 5rem; */
+}
+
+#submitBtn:hover,
+#resetBtn:hover {
+    background-color: var(--light-purple-1);
+    color: var(--white);
+}
+
+/*********************** SIGNUP ***********************/
+.signup-heading {
+    font-size: 6rem;
+    font-family: var(--lora);
+    margin: 20rem 0;
+    margin-left: 17.5%;
+}
+
+.signup-form {
+    background-color: var(--white);
+    margin: 10rem 0 5rem 0;
+    border-radius: 2rem;
+}
+
+.border-left {
+    border-left: 2px solid var(--light-purple-1);
+}
+
+.hr-wrapper {
+    margin-top: 1rem;
+}
+
+.signup-form hr {
+    border: none;
+    height: 2px;
+    background-color: var(--light-purple-1);
+    margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+
+.fadein-down {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--grey-3);
+    margin-left: 16.5%;
+}
+
+
+.signup-form form .text {
+    font-size: 7rem;
+    color: var(--black);
+    margin: 7rem 3rem 10rem 0;
+    font-family: var(--lora);
+    opacity: 0;
+}
+
+.signup-form form .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 10rem;
+    opacity: 0;
+}
+
+.signup-form form .wrapper div {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    justify-content: space-between;
+}
+
+.signup-form form label {
+    font-size: 2rem;
+    margin: 1rem 0;
+    max-width: fit-content;
+}
+
+pre {
+    font-family: var(--poppins);
+}
+
+.signup-form form .wrapper input {
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    width: 22vw;
+    height: 5rem;
+    border: 1px solid var(--grey-3);
+    border-radius: 5rem;
+}
+
+.signup-form form input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    cursor: pointer;
+    border: 1px solid var(--grey-3);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5rem;
+}
+
+/*****************MEDIA QUERIES**************/
+@media screen and (max-width: 896px){
+    .login-form .text {
+        font-size: 4rem;
+    }
+    .login-form form .wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #signupTarget {
+        font-size: 2.5rem;
+    }
+    #signupTarget a {
+        padding: 0.5rem 1rem;
+    }
+    #submitBtn,
+    #resetBtn {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+}

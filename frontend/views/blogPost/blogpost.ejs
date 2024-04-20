@@ -1,0 +1,41 @@
+<head>
+    <script src="https://kit.fontawesome.com/1fa877e563.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/blogpost.css">
+</head>
+
+<main>
+    <section class="blog-hero">
+        <div class="blog-links">
+            <a href="/blogs" class="btn btn-back"><span>&larr;</span> Back</a>
+        </div>
+        <div class="blog-heading">
+            <h1>
+                <%= data.title %>
+            </h1>
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="text">
+            <pre>
+                <%= data.content %>
+            </pre>
+        </div>
+        <ul class="share-links">
+            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-link"></i></a></li>
+        </ul>
+    </section>
+</main>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8/dist/smooth-scrollbar.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const scrollbar = Scrollbar.init(document.querySelector('main'));
+    });
+</script>

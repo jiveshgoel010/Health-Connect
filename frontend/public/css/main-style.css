@@ -247,12 +247,10 @@ body {
 
 
 /*********************** MEDIA QUERIES ***********************/
-@media screen and (max-width: 694px) {
-    .navbar{
-        display: none;
-    }
-    .nav-resp {
-        display: flex;
+@media screen and (max-width: 1024px) {
+    .footer-content .links img{
+        width: 25px;
+        height: auto;
     }
 }
 
@@ -266,9 +264,12 @@ body {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .footer-content .links img{
-        width: 25px;
-        height: auto;
+@media screen and (max-width: 694px) {
+    .navbar{
+        display: none;
+    }
+    .nav-resp {
+        display: flex;
     }
 }
+

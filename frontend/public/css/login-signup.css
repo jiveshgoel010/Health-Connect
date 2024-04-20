@@ -287,6 +287,8 @@ pre {
     background-color: var(--light-purple-1);
     color: var(--white);
 }
+
+
 /*****************MEDIA QUERIES**************/
 @media screen and (max-width: 1018px) {
     .signup-form form .wrapper div {
@@ -314,7 +316,6 @@ pre {
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
     }
-
 }
 
 @media screen and (max-width: 740px) {

@@ -58,7 +58,7 @@
 
 .login-form {
     max-width: 90vw;
-    margin: 10rem auto 5rem auto;
+    margin: 10rem auto 20rem auto;
     background-color: var(--white);
     border-radius: 2rem;
 }
@@ -93,7 +93,7 @@
 .login-form form .wrapper div {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .login-form form .wrapper input {
@@ -167,34 +167,6 @@
 }
 
 /*********************** SIGNUP ***********************/
-.signup-heading {
-    font-size: 6rem;
-    font-family: var(--lora);
-    margin: 20rem 0;
-    margin-left: 17.5%;
-}
-
-.signup-form {
-    background-color: var(--white);
-    margin: 10rem 0 5rem 0;
-    border-radius: 2rem;
-}
-
-.border-left {
-    border-left: 2px solid var(--light-purple-1);
-}
-
-.hr-wrapper {
-    margin-top: 1rem;
-}
-
-.signup-form hr {
-    border: none;
-    height: 2px;
-    background-color: var(--light-purple-1);
-    margin-top: 1rem;
-}
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -211,54 +183,77 @@
     animation: fadeIn 2s ease-in-out forwards;
 }
 
+.signup-heading {
+    max-width: 90vw;
+    font-size: 6rem;
+    font-family: var(--lora);
+    margin: 20rem auto;
+    background: linear-gradient(to right,var(--dark-purple-2), var(--light-purple-2), var(--bg-purple-1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.signup-form {
+    max-width: 90vw;
+    margin: 10rem auto 20rem auto;
+    background-color: var(--white);
+    border-radius: 2rem;
+}
+
+.signup-form hr {
+    border: none;
+    height: 2px;
+    background-color: var(--light-purple-1);
+    margin-top: 1rem;
+}
+
+.signup-form .text {
+    font-size: 6rem;
+    font-family: var(--lora);
+    margin: 2rem 3rem;
+}
+
 .signup-form form {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     color: var(--grey-3);
-    margin-left: 16.5%;
-}
-
-
-.signup-form form .text {
-    font-size: 7rem;
-    color: var(--black);
-    margin: 7rem 3rem 10rem 0;
-    font-family: var(--lora);
-    opacity: 0;
+    margin: 2rem 3rem;
+    margin-top: 5rem;
 }
 
 .signup-form form .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem 10rem;
+    gap: 2rem 10rem;
     opacity: 0;
+    font-size: 2rem;
+    /* max-width: 85%; */
 }
 
 .signup-form form .wrapper div {
     display: flex;
-    align-items: center;
-    gap: 10rem;
     justify-content: space-between;
+    max-width: 75%;
+    align-items: center;
+    gap: 5rem;
 }
 
-.signup-form form label {
+/* .signup-form form label {
     font-size: 2rem;
     margin: 1rem 0;
     max-width: fit-content;
-}
+} */
 
 pre {
     font-family: var(--poppins);
 }
 
 .signup-form form .wrapper input {
-    margin: 1rem 0;
     padding: 1rem 2rem;
-    width: 22vw;
-    height: 5rem;
     border: 1px solid var(--grey-3);
     border-radius: 5rem;
+    font-size: 1.4rem;
 }
 
 .signup-form form input[type="file"] {
@@ -273,7 +268,33 @@ pre {
     border-radius: 5rem;
 }
 
+#loginTarget {
+    margin: 5rem 0;
+    font-size: 3.5rem;
+    font-family: var(--lora);
+    /* opacity: 0; */
+}
+
+#loginTarget a {
+    color: var(--light-purple-1);
+    border: 1px solid var(--light-purple-1);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+}
+
+#loginTarget a:hover {
+    background-color: var(--light-purple-1);
+    color: var(--white);
+}
 /*****************MEDIA QUERIES**************/
+@media screen and (max-width: 1018px) {
+    .signup-form form .wrapper div {
+        max-width: 100%;
+        gap: 2rem;
+    }
+}
+
 @media screen and (max-width: 896px){
     .login-form .text {
         font-size: 4rem;
@@ -282,10 +303,10 @@ pre {
         flex-direction: column;
         gap: 2rem;
     }
-    #signupTarget {
+    #signupTarget, #loginTarget {
         font-size: 2.5rem;
     }
-    #signupTarget a {
+    #signupTarget a, #loginTarget a{
         padding: 0.5rem 1rem;
     }
     #submitBtn,
@@ -293,4 +314,32 @@ pre {
         font-size: 1.5rem;
         padding: 0.5rem 1rem;
     }
+
 }
+
+@media screen and (max-width: 740px) {
+    .signup-form form .wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .signup-form form .wrapper div {
+        width: 75%;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .signup-form form .wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .signup-form form .wrapper div{
+        width: 100%;
+        gap: 2rem;
+    }
+    
+}
+
+

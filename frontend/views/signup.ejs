@@ -5,11 +5,11 @@
     <div class="signup-form">
         <br><br>
         <hr>
+        <div class="text">
+            Become a part of our family! 😊
+        </div>
         <form action="/signup" method="POST" enctype="multipart/form-data">
-            <div class="text">
-                Please fill in this form and become a part of our family.
-            </div>
-            <div class="wrapper">
+            <div class="wrapper" id="signupWrapper">
                 <div>
                     <label for="name"><strong>Name</strong></label>
                     <input type="text" name="name" id="name" placeholder="Name">
@@ -41,6 +41,7 @@ Password</pre>
                     </label>
                     <input type="password" name="cnfmPassword" id="cnfmPassword" placeholder="Confirm Password">
                 </div>
+
             </div>
             <div class="formBtn">
                 <input type="submit" value="Register" id="submitBtn">

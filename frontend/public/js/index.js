@@ -87,97 +87,42 @@ $(document).ready(function () {
 });
 
 
-window.onload = function () {
-    tsParticles.load("tsparticles", {
-        particles: {
-            number: {
-                value: 100
-            },
-            move: {
-                enable: true
-            },
-            color: {
-                value: "#ffffff"
-            },
-
-            // adding shape of particles
-            shape: {
-                type: "circle",
-            },
-            opacity: {
-                value: 0.5,
-                random: true,
-                anim: {
-                    enable: true,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                }
-            },
-            // changing the size of elements
-            size: {
-                value: 5,
-                random: true,
-                animation: {
-                    enable: false,
-                    speed: 40,
-                    sync: false
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                },
-            },
-        }
-    });
-}
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function showSlides(n) {
-  let i;  
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }  
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");  
-  }  
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}  
+// function showSlides(n) {
+//   let i;  
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }  
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");  
+//   }  
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }  
 
-function plusSlide(n){
-    showSlides(slideIndex += n);
-}    
+// function plusSlide(n){
+//     showSlides(slideIndex += n);
+// }    
 
-//Auto
-function autoSlide(){
-    // plusSlide(1);
-}    
+// //Auto
+// function autoSlide(){
+//     // plusSlide(1);
+// }    
 
-setInterval(autoSlide, 10000);
+// setInterval(autoSlide, 10000);
 
-// Thumbnail controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}    
-
+// // Thumbnail controls
+// function currentSlide(n) {
+//     showSlides(slideIndex = n);
+// }    
 
 
 //Responsive menu
@@ -185,15 +130,24 @@ document.addEventListener('DOMContentLoaded', function() {
     let menuBtn = document.getElementById('menuBtn');
     let menu = document.getElementById('menu');
     let img = document.querySelector('.nav-resp .menu-btn img');
+    let main = document.querySelector('.main');
+    let footer = document.querySelector('.footer');
 
     menuBtn.addEventListener('click', function () {
         if (menu.style.display === 'block') {
             menu.style.display = 'none';
-            img.src = '/svg/menu.svg'; // Change back to the original menu icon
+            img.src = '/svg/menu.svg'; 
+            main.style.filter = 'blur(0px)';
+            footer.style.filter = 'blur(0px)';
+            main.style.opacity = '1';
+            footer.style.opacity = '1';
         } else {
             menu.style.display = 'block';
-            img.src = '/svg/cross.svg'; // Change to the cross icon when menu is opened
+            img.src = '/svg/cross.svg'; 
+            main.style.filter = 'blur(10px)';
+            footer.style.filter = 'blur(10px)';
+            main.style.opacity = '0.50';
+            footer.style.opacity = '0.50';
         }
     });
 });
-

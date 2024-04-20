@@ -148,14 +148,24 @@ document.addEventListener('DOMContentLoaded', function() {
     let menuBtn = document.getElementById('menuBtn');
     let menu = document.getElementById('menu');
     let img = document.querySelector('.nav-resp .menu-btn img');
+    let main = document.querySelector('.main');
+    let footer = document.querySelector('.footer');
 
     menuBtn.addEventListener('click', function () {
         if (menu.style.display === 'block') {
             menu.style.display = 'none';
-            img.src = '/svg/menu.svg'; // Change back to the original menu icon
+            img.src = '/svg/menu.svg';
+            main.style.opacity = '1';
+            main.style.filter = 'blur(0px)';
+            footer.style.filter = 'blur(0px)';
+            footer.style.opacity = '1';
         } else {
             menu.style.display = 'block';
-            img.src = '/svg/cross.svg'; // Change to the cross icon when menu is opened
+            img.src = '/svg/cross.svg'; 
+            main.style.filter = 'blur(10px)';
+            footer.style.filter = 'blur(10px)';
+            main.style.opacity = '0.50';
+            footer.style.opacity = '0.50';
         }
     });
 });

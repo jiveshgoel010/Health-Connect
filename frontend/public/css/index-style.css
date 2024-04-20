@@ -159,7 +159,6 @@ body {
     border: 1px solid var(--light-purple-1);
     background-color: var(--white);
     border-radius: 5rem;
-    font-size: 2rem;
     padding: 1.2rem 3.5rem;
     display: none;
 }
@@ -184,11 +183,12 @@ body {
     position: absolute;
     top: 13.5rem;
     right: 5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     border-radius: 2rem;
     padding: 2rem;
     z-index: 10;
 }
+
 
 .menu .navbar-list li a {
     padding: 1rem 2rem;

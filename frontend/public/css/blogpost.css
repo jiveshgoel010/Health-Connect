@@ -36,7 +36,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 80vw;
-    margin: 0 auto;
+    margin: 10rem auto;
 }
 
 .blogs-wrapper .heading {
@@ -76,7 +76,7 @@
     background-color: var(--white);
     border-radius: 2rem;
     max-width: 90vw;
-    margin: 10rem auto;
+    margin: 20rem auto;
     padding: 5rem 0;
 }
 
@@ -87,7 +87,7 @@
     max-width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
-    gap: 2.5rem;
+    gap: 5rem;
 }
 
 .blogs li{
@@ -218,7 +218,7 @@
     border-radius: 2rem;
     padding: 8rem 4rem;
     max-width: 90vw;
-    margin: 0 auto;
+    margin: 10rem auto 20rem auto;
 }
 
 .addBlogPost .heading {
@@ -277,7 +277,7 @@
     border-radius: 2rem;
     padding: 2rem 4rem;
     max-width: 90vw;
-    margin: 0 auto;
+    margin: 10rem auto 20rem auto;
 }
 
 .editBlogPost .heading {

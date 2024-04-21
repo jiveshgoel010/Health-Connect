@@ -88,7 +88,7 @@ $(document).ready(function () {
 
 
 
-
+document.addEventListener("DOMContentLoaded", function() {
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -114,7 +114,7 @@ function plusSlide(n){
 
 //Auto
 function autoSlide(){
-    // plusSlide(1);
+    plusSlide(1);
 }    
 
 setInterval(autoSlide, 10000);
@@ -123,7 +123,7 @@ setInterval(autoSlide, 10000);
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }    
-
+});
 
 //Responsive menu
 document.addEventListener('DOMContentLoaded', function() {
